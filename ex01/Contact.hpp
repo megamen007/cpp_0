@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboudrio <mboudrio@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/01 22:33:44 by mboudrio          #+#    #+#             */
-/*   Updated: 2023/12/07 22:06:31 by mboudrio         ###   ########.fr       */
+/*   Created: 2023/12/07 23:33:33 by mboudrio          #+#    #+#             */
+/*   Updated: 2023/12/07 23:50:37 by mboudrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
-int main(int ac,char **av)
+#include "iostream"
+#include "string"
+
+class CONTACT
 {
+    public:
+        int index;
+        std::string first_name;
+        std::string last_name;
+        std::string nickname; 
+};
 
-    if (ac == 1)
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-    
-    int i;
-    int j;
-    
-    i = 1;
-    while(av[i])
-    {
-        j = 0;
-        while(av[i][j])
-        {
-            std::putchar(std::toupper(av[i][j]));
-            j++;
-        }
-        i++;
-    }
-}
+#endif
