@@ -6,7 +6,7 @@
 /*   By: mboudrio <mboudrio@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 23:33:48 by mboudrio          #+#    #+#             */
-/*   Updated: 2023/12/08 00:41:42 by mboudrio         ###   ########.fr       */
+/*   Updated: 2023/12/09 19:51:14 by mboudrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,18 @@
 
 class PhoneBook
 {
-     
-    CONTACT contacts[8];
-    int contact_count;
-
-    void add_feature();
-    void search_feature();
-    void exit_feature();
+    private:
+        Contact contacts[8];
+        int contact_count;
+        
+    public:
+    
+        void display_contact();
+        void display_specific_contact(int i);
+        void quit_phonebook_program();
+        
+        // void search_feature();  
 };
+
 
 #endif
