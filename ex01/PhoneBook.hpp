@@ -6,7 +6,7 @@
 /*   By: mboudrio <mboudrio@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 23:33:48 by mboudrio          #+#    #+#             */
-/*   Updated: 2023/12/09 19:51:14 by mboudrio         ###   ########.fr       */
+/*   Updated: 2023/12/13 17:17:58 by mboudrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,21 @@
 class PhoneBook
 {
     private:
-        Contact contacts[8];
         int contact_count;
-        
+        Contact contacts[8];
     public:
-    
-        void display_contact();
-        void display_specific_contact(int i);
-        void quit_phonebook_program();
+        Contact& get_Contact(int index);
+        void set_index();
+        int getIndex();
+        std::string phone_menu();
+        PhoneBook add_feature(int index);
+        void search_feature();
+        void display_contacts();
+        // void contacto(int index);
         
-        // void search_feature();  
 };
 
+
+void empty_check(std::string msg, std::string input);
 
 #endif

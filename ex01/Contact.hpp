@@ -6,7 +6,7 @@
 /*   By: mboudrio <mboudrio@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 23:33:33 by mboudrio          #+#    #+#             */
-/*   Updated: 2023/12/09 19:55:47 by mboudrio         ###   ########.fr       */
+/*   Updated: 2023/12/13 17:24:08 by mboudrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,23 @@ class Contact
         std::string last_name;
         std::string nick_name;
         std::string phone_number;
+        std::string darkset_secret;
+        // int index;
         
     public:
         void set_first_name(const std::string fname);
         void set_last_name(const std::string lname);
         void set_nick_name(const std::string nname);
         void set_phone_number(const std::string pnumber);
+        void set_darkest_secret(const std::string d_secret);
         std::string get_first_name();
         std::string get_last_name();
         std::string get_nick_name();
         std::string get_phone_number();
-        Contact add_feature(const Contact& contact);
+        std::string get_darkest_secret();
+        void contacto(int index);
 };
-        void set_contact_info();
+void set_contact_info();
 
 #endif
+//10101010 00000000 11111100 11111111

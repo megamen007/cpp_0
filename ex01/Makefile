@@ -6,7 +6,7 @@
 #    By: mboudrio <mboudrio@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/08 00:29:13 by mboudrio          #+#    #+#              #
-#    Updated: 2023/12/09 17:27:33 by mboudrio         ###   ########.fr        #
+#    Updated: 2023/12/13 15:58:07 by mboudrio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 CC = c++
 
 # Define the flags to pass to the compiler
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=
 
 # Define the source files for the so_long executable
 SRC = PhoneBook.cpp Contact.cpp phony.cpp

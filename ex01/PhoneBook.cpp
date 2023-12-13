@@ -6,7 +6,7 @@
 /*   By: mboudrio <mboudrio@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 23:33:45 by mboudrio          #+#    #+#             */
-/*   Updated: 2023/12/09 17:35:40 by mboudrio         ###   ########.fr       */
+/*   Updated: 2023/12/13 15:49:15 by mboudrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,16 @@
 //     display_contact();
 //     display_specific_contact();
 // }
-
+Contact &PhoneBook::get_Contact(int index)
+{
+    return contacts[index];
+}
+void PhoneBook::set_index(){
+    this->contact_count = 0;
+}
+int PhoneBook::getIndex() {
+    return this->contact_count;
+}
 // void exit_feature()
 // {
 //     quit_phonebook_program();   
