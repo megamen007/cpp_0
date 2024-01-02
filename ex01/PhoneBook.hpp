@@ -6,7 +6,7 @@
 /*   By: mboudrio <mboudrio@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 23:33:48 by mboudrio          #+#    #+#             */
-/*   Updated: 2023/12/14 23:30:28 by mboudrio         ###   ########.fr       */
+/*   Updated: 2024/01/02 19:53:48 by mboudrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class PhoneBook
         void display_contacts();
         void contacto(int index);        
         void display_specific_contact(int index);
-        int contact_choice();
+        void contact_choice();
 
 };
 void empty_check(std::string msg, std::string &input);

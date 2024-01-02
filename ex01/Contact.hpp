@@ -6,15 +6,16 @@
 /*   By: mboudrio <mboudrio@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 23:33:33 by mboudrio          #+#    #+#             */
-/*   Updated: 2023/12/14 23:28:03 by mboudrio         ###   ########.fr       */
+/*   Updated: 2024/01/02 18:01:06 by mboudrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
-#include "iostream"
-#include "string"
+#include <iostream>
+#include <string>
+#include <iomanip>
 
 class Contact
 {
