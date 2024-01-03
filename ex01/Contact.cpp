@@ -6,7 +6,7 @@
 /*   By: mboudrio <mboudrio@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 23:33:37 by mboudrio          #+#    #+#             */
-/*   Updated: 2023/12/14 19:09:44 by mboudrio         ###   ########.fr       */
+/*   Updated: 2024/01/03 17:56:28 by mboudrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ std::string Contact::get_phone_number()
 }
 std::string Contact::get_darkest_secret()
 {
-    return phone_number;
+    return darkset_secret;
 }
 //setters members fns definitions :
 void Contact::set_first_name(const std::string &fname)

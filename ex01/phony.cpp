@@ -6,7 +6,7 @@
 /*   By: mboudrio <mboudrio@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 22:06:02 by mboudrio          #+#    #+#             */
-/*   Updated: 2024/01/02 19:57:21 by mboudrio         ###   ########.fr       */
+/*   Updated: 2024/01/03 18:44:12 by mboudrio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void empty_check(std::string msg, std::string &input)
     {
         std::cout << msg;
         if (!std::getline(std::cin, input))
-            exit(0);
+            return ;
         if (!input.empty())
         break;
     }
@@ -48,10 +48,7 @@ std::string PhoneBook::phone_menu()
     if (!std::getline(std::cin, choice))
         exit(0);
     if (choice != "ADD" && choice != "SEARCH" && choice != "EXIT")
-    {
-       std::cout << "Invalid option, try a correct one\n";
-        exit(0);
-    }
+        std::cout << "Invalid option, try a correct one\n";
     return choice;
 }
 
@@ -69,20 +66,25 @@ void PhoneBook::contact_choice()
     int input_index = 0;
     std::cout << "do u want to see a specific contact \n";
     if (!std::getline(std::cin, c))
-        exit(0);
+        return ;
     if (c.length() != 1)
     {
         std::cout << "Invalid INDEX , try a correct one" << std::endl;
         return ;
     }
-    else 
-        input_index = c[0] - 48;
+    input_index = c[0] - 48;
     if (valid_index(input_index) == 1)
         display_specific_contact(input_index);
+    else
+    {
+            std::cout << "Invalid INDEX , try a correct one" << std::endl;
+        return ;
+    }
 }
 void formal_display(std::string field)
 {
-    if (field.length() >= 10){
+    if (field.length() >= 10)
+    {
         field[9] = '.';
         std::cout << field.substr(0, 10);
     }
@@ -92,14 +94,13 @@ void formal_display(std::string field)
 }
 void PhoneBook::contacto(int index)
 {
-    std::cout << "-CONTACT #" << index  << " <<----" << std::endl;
-    std::cout << "Phone Number\t" << get_Contact(index).get_first_name() << std::endl;
-    std::cout << "Phone Number\t" << get_Contact(index).get_last_name() << std::endl;
-    std::cout << "Phone Number\t" << get_Contact(index).get_nick_name() << std::endl;
-    std::cout << "Phone Number\t" << get_Contact(index).get_phone_number() << std:: endl;
-    std::cout << "Darkset secret\t" << get_Contact(index).get_darkest_secret() << std::endl;
+    std::cout << "-CONTACT : #" << index << " <<----" << std::endl;
+    std::cout << "First Name :\t" << get_Contact(index).get_first_name() << std::endl;
+    std::cout << "Last Name :\t" << get_Contact(index).get_last_name() << std::endl;
+    std::cout << "Nick Name :\t" << get_Contact(index).get_nick_name() << std::endl;
+    std::cout << "Phone Number :\t" << get_Contact(index).get_phone_number() << std:: endl;
+    std::cout << "Darkset secret :\t" << get_Contact(index).get_darkest_secret() << std::endl;
 }
-
 void PhoneBook::display_contacts()
 {
     int i = 0;
@@ -109,7 +110,6 @@ void PhoneBook::display_contacts()
         std::cout << "*********************************************" << std::endl;
     while(i < 8) 
     {
-     
         std::cout << "|"  << std::setw(10)  << i << "|"; 
         std::cout << std::setw(10);formal_display(get_Contact(i).get_first_name());
         std::cout << "|" << std::setw(10);formal_display(get_Contact(i).get_last_name());
@@ -135,7 +135,6 @@ int main()
     PhoneBook draft;
     std::string choice;
     draft.set_index();
-    // int index;
     int flag;
 
     flag = 1;
@@ -144,7 +143,7 @@ int main()
         if (flag)
         {
             std::cout << "    Welcome to your awesome phonebook\n"
-                  << "              Choose your option : \n"
+                  << "          Choose your option : \n"
                   << "   - ADD -->  \"to save a new contact.\"\n"
                   << "   - SEARCH -->  \"to display a specific contact.\"\n"
                   << "   - EXIT -->  \"to quit the program.\"\n";
